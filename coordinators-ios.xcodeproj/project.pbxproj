@@ -12,6 +12,7 @@
 		3B1436B121C34B0F00133AE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1436AF21C34B0F00133AE2 /* Main.storyboard */; };
 		3B1436B321C34B0F00133AE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B1436B221C34B0F00133AE2 /* Assets.xcassets */; };
 		3B1436B621C34B0F00133AE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1436B421C34B0F00133AE2 /* LaunchScreen.storyboard */; };
+		3B281CA321C353FE003F667F /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B281CA221C353FE003F667F /* BaseCoordinator.swift */; };
 		4A5CC5DF70C067819916382B /* Pods_coordinators_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8385C9420F437385EE2A6EF6 /* Pods_coordinators_iosTests.framework */; };
 		4B1F3CBE829FFAA42B7AC485 /* Pods_coordinators_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3444E1D76B8C22FB2E6814 /* Pods_coordinators_ios.framework */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,7 @@
 		3B1436B721C34B0F00133AE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B1436BC21C34B1000133AE2 /* coordinators-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "coordinators-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B1436C221C34B1000133AE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B281CA221C353FE003F667F /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		8385C9420F437385EE2A6EF6 /* Pods_coordinators_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_coordinators_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0315DD841D34D0FBEFFF35F /* Pods-coordinators-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coordinators-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-coordinators-ios/Pods-coordinators-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		CB76E884CB28C225131368E5 /* Pods-coordinators-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coordinators-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-coordinators-iosTests/Pods-coordinators-iosTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		3B1436AA21C34B0F00133AE2 /* coordinators-ios */ = {
 			isa = PBXGroup;
 			children = (
+				3B281CA121C35384003F667F /* Components */,
 				3B1436AB21C34B0F00133AE2 /* AppDelegate.swift */,
 				3B1436AD21C34B0F00133AE2 /* ViewController.swift */,
 				3B1436AF21C34B0F00133AE2 /* Main.storyboard */,
@@ -103,6 +106,14 @@
 				3B1436C221C34B1000133AE2 /* Info.plist */,
 			);
 			path = "coordinators-iosTests";
+			sourceTree = "<group>";
+		};
+		3B281CA121C35384003F667F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3B281CA221C353FE003F667F /* BaseCoordinator.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		6CE3A3B4D662E885A71096C6 /* Frameworks */ = {
@@ -367,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B1436AE21C34B0F00133AE2 /* ViewController.swift in Sources */,
+				3B281CA321C353FE003F667F /* BaseCoordinator.swift in Sources */,
 				3B1436AC21C34B0F00133AE2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

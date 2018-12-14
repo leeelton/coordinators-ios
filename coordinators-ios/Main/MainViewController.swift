@@ -11,7 +11,6 @@ import RxSwift
 import RxCocoa
 
 class MainViewController: UIViewController {
-    
     @IBOutlet private var button: UIButton!
     private(set) var viewModel: MainViewModel!
     private let disposeBag: DisposeBag = DisposeBag()

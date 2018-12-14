@@ -21,12 +21,16 @@ class MainCoordinator: BaseCoordinator<Void> {
         let viewModel = MainViewModel()
         let mainViewController = MainViewController.newInstance(viewModel: viewModel)
 
-        viewModel.tappedButton.subscribe { (_) in
-            print("Placeholder move to next screen")
+        viewModel.tappedButton.subscribe { [weak self] (_) in
+            _ = self?.goToTabBar(from: mainViewController)
         }.disposed(by: disposeBag)
 
         window.rootViewController = mainViewController
         window.makeKeyAndVisible()
         return Observable.never()
+    }
+
+    private func goToTabBar(from viewController: UIViewController) -> Observable<Void> {
+        return coordinate(to: TabBarCoordinator(rootViewController: viewController))
     }
 }

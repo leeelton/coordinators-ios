@@ -5,6 +5,7 @@ use_frameworks!
 target 'coordinators-ios' do
     pod 'RxSwift',    '~> 4.4'
     pod 'RxCocoa',    '~> 4.4'
+    pod 'SwiftLint'
 end
 
 # RxTest and RxBlocking make the most sense in the context of unit/integration tests

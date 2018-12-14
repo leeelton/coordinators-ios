@@ -12,7 +12,6 @@
 		3B1436B121C34B0F00133AE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1436AF21C34B0F00133AE2 /* Main.storyboard */; };
 		3B1436B321C34B0F00133AE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B1436B221C34B0F00133AE2 /* Assets.xcassets */; };
 		3B1436B621C34B0F00133AE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1436B421C34B0F00133AE2 /* LaunchScreen.storyboard */; };
-		3B1436C121C34B1000133AE2 /* coordinators_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1436C021C34B1000133AE2 /* coordinators_iosTests.swift */; };
 		4A5CC5DF70C067819916382B /* Pods_coordinators_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8385C9420F437385EE2A6EF6 /* Pods_coordinators_iosTests.framework */; };
 		4B1F3CBE829FFAA42B7AC485 /* Pods_coordinators_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3444E1D76B8C22FB2E6814 /* Pods_coordinators_ios.framework */; };
 /* End PBXBuildFile section */
@@ -37,7 +36,6 @@
 		3B1436B521C34B0F00133AE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B1436B721C34B0F00133AE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B1436BC21C34B1000133AE2 /* coordinators-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "coordinators-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B1436C021C34B1000133AE2 /* coordinators_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coordinators_iosTests.swift; sourceTree = "<group>"; };
 		3B1436C221C34B1000133AE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8385C9420F437385EE2A6EF6 /* Pods_coordinators_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_coordinators_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0315DD841D34D0FBEFFF35F /* Pods-coordinators-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coordinators-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-coordinators-ios/Pods-coordinators-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 		3B1436BF21C34B1000133AE2 /* coordinators-iosTests */ = {
 			isa = PBXGroup;
 			children = (
-				3B1436C021C34B1000133AE2 /* coordinators_iosTests.swift */,
 				3B1436C221C34B1000133AE2 /* Info.plist */,
 			);
 			path = "coordinators-iosTests";
@@ -141,6 +138,7 @@
 				3B1436A621C34B0F00133AE2 /* Resources */,
 				04BEBBC8BFD93C4FFBBADA4D /* [CP] Embed Pods Frameworks */,
 				132B57219EBB46AD1C3062B0 /* [CP] Copy Pods Resources */,
+				3B281CA021C3515A003F667F /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -283,6 +281,24 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-coordinators-ios/Pods-coordinators-ios-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3B281CA021C3515A003F667F /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		8BC97C9BEED8F797BD63826F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -359,7 +375,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B1436C121C34B1000133AE2 /* coordinators_iosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,7 +532,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5A3K724AWU;
 				INFOPLIST_FILE = "coordinators-ios/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eltonium.coordinators-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -533,7 +551,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5A3K724AWU;
 				INFOPLIST_FILE = "coordinators-ios/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eltonium.coordinators-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -550,7 +571,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5A3K724AWU;
 				INFOPLIST_FILE = "coordinators-iosTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eltonium.coordinators-iosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -568,7 +593,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5A3K724AWU;
 				INFOPLIST_FILE = "coordinators-iosTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eltonium.coordinators-iosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

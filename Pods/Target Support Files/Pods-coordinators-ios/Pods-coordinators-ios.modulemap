@@ -1,0 +1,6 @@
+framework module Pods_coordinators_ios {
+  umbrella header "Pods-coordinators-ios-umbrella.h"
+
+  export *
+  module * { export * }
+}

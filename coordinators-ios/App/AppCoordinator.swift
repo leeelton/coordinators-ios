@@ -18,6 +18,7 @@ class AppCoordinator: BaseCoordinator<Void> {
     }
 
     override func start() -> Observable<Void> {
-        return Observable.just(())
+        let mainCoordinator = MainCoordinator(window: window)
+        return coordinate(to: mainCoordinator)
     }
 }

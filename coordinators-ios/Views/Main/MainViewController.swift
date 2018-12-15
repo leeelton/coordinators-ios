@@ -11,17 +11,9 @@ import RxSwift
 import RxCocoa
 
 class MainViewController: UIViewController {
-    
     @IBOutlet private var button: UIButton!
     private(set) var viewModel: MainViewModel!
     private let disposeBag: DisposeBag = DisposeBag()
-
-    static func newInstance(viewModel: MainViewModel) -> UIViewController {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let viewController = storyboard.instantiateInitialViewController() as? MainViewController else { fatalError() }
-        viewController.viewModel = viewModel
-        return viewController
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,4 +26,13 @@ class MainViewController: UIViewController {
             .disposed(by: disposeBag)
     }
 
+}
+
+extension MainViewController {
+    class func newInstance(viewModel: MainViewModel) -> MainViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let viewController = storyboard.instantiateInitialViewController() as? MainViewController else { fatalError() }
+        viewController.viewModel = viewModel
+        return viewController
+    }
 }
